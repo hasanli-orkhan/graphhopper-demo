@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: graphhopper-demo
+  devtools:
+    restart:
+      enabled: true
+    add-properties: true
+
+server:
+  port: 8080
+  error:
+    include-stacktrace: never
+    include-message: always
+
+springdoc:
+  api-docs:
+    path: "/v3/api-docs"
+  swagger-ui:
+    path: "/swagger-ui.html"
+    disable-swagger-default-url: true
+
+logging:
+  file:
+    name: ./logs/graphhopper.log
+  level:
+    root: info
+    info.md7.graphhopperdemo: debug
+
+graphhopper:
+  map-path: ./routing/map/azerbaijan-latest.osm.pbf
+  cache-path: ./routing/cache
